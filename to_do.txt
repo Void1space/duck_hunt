@@ -1,0 +1,4 @@
+- create labels in emails
+- add javascript effect to indicate form submission
+- add prizes.
+- make duck image better
