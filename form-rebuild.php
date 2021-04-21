@@ -5,6 +5,50 @@ session_start();
 	}
 $contest_code = $_SESSION['index'];
 
+// old form submission email and database connection
+/*
+// this array will be an associative array when you extract the values from the form
+// post is a SUPER global
+
+if(isset($_POST['submit'])) {
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phoneNumber = $_POST['phone_number'];
+$payment = $_POST['payment'];
+$to = $email;
+$msg = "Duck Hunter Info \n Your name: $name \n Email: $email \n Phone: $phoneNumber \n Cashapp / Venmo: $payment \n Contest Code: $contest_code";
+$headers = "From: duckhunt@eternallux.com" . "\r\n" .
+"Reply-To: duckhunt@eternmallux.com" . "\r\n" .
+"Reply-To: duckhunt@eternmallux.com" . "\r\n" .
+"CC: voidspacelighting@gmail.com" . "\r\n" .
+'X-Mailer: PHP/' . phpversion();
+
+echo $name;
+$connection = mysqli_connect('localhost', 'ukqes9ijy4czh', 'wabbit_sux672','dbdibwg114v9h2');
+
+ $query = "INSERT INTO hunters(names,email,phone,payment_info,contest_code) ";
+    $query .= "VALUES ('$name','$email','$phoneNumber','$payment','$contest_code')";
+
+   $result =  mysqli_query($connection, $query);
+
+   if(!$result) {
+       die('Query FAILED' . mysqli_error());
+   }
+   
+   mail($to,$name,$msg,$headers);
+
+   }
+    if($connection) {
+
+        echo "We are connected";
+    } else {
+
+    die("Database connection failed");
+    }
+
+    echo "$name <br> $email <br> $phoneNumber <br> $payment <br> $contest_code";
+
+*/
 ?>
 
 
@@ -54,14 +98,11 @@ $contest_code = $_SESSION['index'];
     <!--====== Custom css ======-->
     <link rel="stylesheet" href="/wxyzr/assets/css/style.css" />
 
-    <!--====== Void Space css ======-->
-    <link rel="stylesheet" href="/wxyzr/assets/css/custom.css" />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body>
-    <!--====== PRELOADER PART START ======-->
+    <!--====== PRELOADER PART START ======
 
     <div class="preloader">
       <div class="loader">
@@ -80,7 +121,7 @@ $contest_code = $_SESSION['index'];
       </div>
     </div>
 
-    <!--====== PRELOADER PART ENDS ======-->
+    ====== PRELOADER PART ENDS ======-->
     <!--==== duck picture====-->
     <section id="duck-image" class="duck-image">
         <div class="container">
@@ -91,7 +132,7 @@ $contest_code = $_SESSION['index'];
         </div>
     </section>
     <!--====== CONTACT TWO PART START ======-->
-      
+
     <section id="contact" class="contact-area">
       <div class="container">
         <div class="row justify-content-center">
@@ -129,13 +170,11 @@ $contest_code = $_SESSION['index'];
           </div>
           <div class="col-lg-6">
             <div
-             
               class="contact-form form-style-one mt-35 wow fadeIn"
               data-wow-duration="1.5s"
               data-wow-delay="0.5s"
             >
-              <form autocomplete="off" id="contact-form">
-                <div class="hunt-success"></div>
+              <form id="contact-form">
                 <div class="form-input mt-15">
                   <label>Name*</label>
                   <div class="input-items default">
@@ -171,14 +210,14 @@ $contest_code = $_SESSION['index'];
                     </div>
                   </div>
                 <!-- form input -->
-                <div class="mt-15">
+               <!-- <div class="mt-15">
                   <label>Contest Code</label>
                   <div class="input-items default">
-                    <!-- <h2 class="random-number">Hello there!</h2> -->
-					<h2><?php echo $contest_code; ?></h2>
-                    <!-- <i class="lni-pencil-alt"></i> -->
+                    
+					<h2><?php echo $contest_code ?></h2>
+                    <!-- <i class="lni-pencil-alt"></i> 
                   </div>
-                </div>
+                </div>-->
                 <div class="mt-15">
                     <p>*All fields required</p>
                 </div>
@@ -186,7 +225,7 @@ $contest_code = $_SESSION['index'];
                 <p class="form-message"></p>
                 <div class="form-input rounded-buttons mt-20">
                   <!--<input type="submit" name="submit" class="main-btn rounded-three submit-btn">-->
-					<input id="submit-btn" type="submit" name="submit_btn"  class="main-btn rounded-three" value="Enter Duck Hunt">
+					<input id="submit-btn" type="submit" name="submit_btn"  class="rounded-three" value="Enter Duck Hunt">
                 </div>
                 <!-- form input -->
               </form>
@@ -443,37 +482,11 @@ $contest_code = $_SESSION['index'];
       <!-- footer copyright -->
     </footer>
         <!-- jquery for form -->
-    <script type="text/javascript">
+        <script type="text/javascript">
       $(document).ready(function(){
-        $("#contact-form").on('submit',function(e){
+        $("#myForm").on('submit',function(e){
           e.preventDefault();
-          
-          $.ajax({
-            type: "POST",
-            url: "signup.php",
-            data:new FormData(this),
-            dataType: "json",
-            contentType: false,
-            cache: false,
-            processData:false,
-
-            success:function(response){
-              $(".hunt-success").css("display", "block");
-
-              if(response.status == 1){
-
-                $("#contact-form")[0].reset(); // resets the form
-                $(".hunt-success").html('<p>' + response.message + '</p>');
-              }else{
-
-                $(".hunt-success").css("display", "block");
-                $(".hunt-success").html('<p>' + response.message + '</p>');
-              }
-            }
-          });
-
-          //File Validation
-
+          alert("Clicked");
 
         });
       });
@@ -493,7 +506,7 @@ enablejavascript="false"> -->
 
     <!--====== PART ENDS ======-->
 
-    <!--====== jquery js ======-->
+    <!--====== jquery js ======
     <script src="/wxyzr/assets/js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="/wxyzr/assets/js/vendor/jquery-1.12.4.min.js"></script>
     
@@ -501,7 +514,7 @@ enablejavascript="false"> -->
 
 
 
-    <!--====== Bootstrap js ======-->
+    ====== Bootstrap js ======-->
     <script src="/wxyzr/assets/js/bootstrap.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
 

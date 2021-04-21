@@ -1,0 +1,22 @@
+/* .hunt-success {
+  text-align: center;
+  color: green;
+  padding: 10px 0px;
+  background: indianred;
+  font-size: 20px;
+  display: none;
+} */
+.hunt-success {
+  text-align: center;
+  color: #162a83;
+  padding: 10px 0px;
+  background: rgba(231, 235, 249, 1);
+  font-size: 20px;
+  display: none;
+}
+.hunt-success p {
+  margin: 0;
+}
+.hunt-success p span {
+  color: #980e0e;
+}
