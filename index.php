@@ -1,12 +1,4 @@
-<?php
-session_start();
-    if(!isset($_SESSION['index'])){
-        $_SESSION['index'] = rand(100000, 999999);
-	}
-$contest_code = $_SESSION['index'];
-
-?>
-
+<?php include('randomGen.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,5 +1,6 @@
 <?php 
-
+include('randomGen.php');
+include('config.php');
 
 $errorEmpty = false;
 $errorEmail = false;
@@ -26,11 +27,9 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['phoneNumber'
 
         $response['message'] = "Success.";
         // $con = mysqli_connect('localhost', 'ukqes9ijy4czh', 'wabbit_sux672','dbdibwg114v9h2');
-        $con = mysqli_connect('localhost', 'ukqes9ijy4czh', 'wabbit_sux672','dbdibwg114v9h2');
 
-        $query = "INSERT INTO hunters(names,email,phone,payment_info) ";
-            $query .= "VALUES ('$name','$email','$phoneNumber','$payment')";
-        mysqli_query($con,$query);
+        $query = "INSERT INTO hunters(names,email,phone,payment_info,contest_code) ";
+            $query .= "VALUES ('$name','$email','$phoneNumber','$payment','$contest_code')";
 
             if(mysqli_query($con,$query)){
                 $response['message'] = "You're in the hunt!";

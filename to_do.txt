@@ -1,5 +1,5 @@
-- create labels in emails
-- add javascript effect to indicate form submission
+- create labels in emails - done
+- add javascript effect to indicate form submission 
 - add prizes.
 - make duck image better
 - add php to confirm email sent again
