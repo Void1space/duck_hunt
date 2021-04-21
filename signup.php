@@ -26,7 +26,6 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['phoneNumber'
     if(!empty($name) && !empty($email) && !empty($phoneNumber) && !empty($payment)){
 
         $response['message'] = "Success.";
-        // $con = mysqli_connect('localhost', 'ukqes9ijy4czh', 'wabbit_sux672','dbdibwg114v9h2');
 
         $query = "INSERT INTO hunters(names,email,phone,payment_info,contest_code) ";
             $query .= "VALUES ('$name','$email','$phoneNumber','$payment','$contest_code')";
