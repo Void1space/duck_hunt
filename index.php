@@ -53,7 +53,7 @@
   </head>
 
   <body>
-    <!--====== PRELOADER PART START ======-->
+    <!--====== PRELOADER PART START
 
     <div class="preloader">
       <div class="loader">
@@ -73,14 +73,16 @@
     </div>
 
     <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== NAVBAR PART ENDS ======-->
     <!--==== duck picture====-->
     <section id="duck-image" class="duck-image">
-        <div class="container">
-            <img class="fadeIn" src="/wxyzr/assets/images/duck-hunt-prize.png" width="75%">
-            <div class="content-center">
-                <h1>DUCK HUNT CHALLENGE!</h1>
-            </div>
+        
+        <img class="fadeIn duck-hunt-image" src="/wxyzr/assets/images/duck-hunt-prize.png">
+        <div class="duck-hunt-text">
+          <h2>DUCK HUNT CHALLENGE!</h2>
         </div>
+            
     </section>
     <!--====== CONTACT TWO PART START ======-->
       
@@ -245,7 +247,7 @@
               data-wow-duration="1.5s"
               data-wow-offset="100"
             >
-              <img src="/wxyzr/assets/images/services.png" alt="services" />
+              <img src="/wxyzr/assets/images/duck-prize.png" alt="duck hunt prizes" />
             </div>
             <div class="section-title text-center mt-30 pb-40">
               <h4
@@ -259,7 +261,7 @@
                 data-wow-duration="1.5s"
                 data-wow-delay="1s"
               >
-                Tap-in and get a chance to win a cash prize!
+                Tap-in and get a chance to win a great prizes!
               </p>
             </div>
             <!-- section title -->
@@ -275,13 +277,12 @@
               data-wow-delay="1.2s"
             >
               <div class="about-icon">
-                <img src="/wxyzr/assets/images/icon-1.png" alt="Icon" />
+                <img src="/wxyzr/assets/images/segway_minipro_1.webp" alt="segway" />
               </div>
               <div class="about-content media-body">
-                <h4 class="about-title">Powerful templates</h4>
+                <h4 class="about-title">Segway MiniPro</h4>
                 <p class="text">
-                  Poorly designed presentations are a thing of the past. Create
-                  beautiful and high-quality content that is aligned.
+                  Win a Segway Minipro. This innovative transporter can be yours!
                 </p>
               </div>
             </div>
@@ -294,17 +295,16 @@
               data-wow-delay="1.4s"
             >
               <div class="about-icon">
-                <img src="/wxyzr/assets/images/icon-2.png" alt="Icon" />
+                <img src="/wxyzr/assets/images/green-dollar-sign.jpg" alt="money" />
               </div>
               <div class="about-content media-body">
-                <h4 class="about-title">Designed for everyone</h4>
+                <h4 class="about-title">$100 Cash Money</h4>
                 <p class="text">
-                  Poorly designed presentations are a thing of the past. Create
-                  beautiful and high-quality content that is aligned.
+                  We will send $100 to your Venmo or Cashapp account. Enter now for a chance to get some cash!
                 </p>
               </div>
             </div>
-            <!-- single about -->
+            <!-- single about 
           </div>
           <div class="col-lg-6">
             <div
@@ -323,7 +323,7 @@
                 </p>
               </div>
             </div>
-            <!-- single about -->
+            <!-- single about
           </div>
           <div class="col-lg-6">
             <div
