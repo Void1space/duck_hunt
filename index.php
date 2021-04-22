@@ -448,19 +448,20 @@
             contentType: false,
             cache: false,
             processData:false,
-
+            
             success:function(response){
-              $(".hunt-success").css("display", "block");
-
+              $(".hunt-success").css("display", "block").css("background","rgb(70, 235, 5)");
+              
               if(response.status == 1){
 
                 $("#contact-form")[0].reset(); // resets the form
                 $(".hunt-success").html('<p>' + response.message + '</p>');
               }else{
 
-                $(".hunt-success").css("display", "block");
+                $(".hunt-success").css("display", "block").css("background","red");
                 $(".hunt-success").html('<p>' + response.message + '</p>');
               }
+              // $(window).scrollTop(position);
             }
           });
 
