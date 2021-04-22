@@ -126,7 +126,7 @@
               data-wow-duration="1.5s"
               data-wow-delay="0.5s"
             >
-              <form autocomplete="off" id="contact-form">
+              <form autocomplete="on" id="contact-form">
                 <div class="hunt-success"></div>
                 <div class="form-input mt-15">
                   <label>Name*</label>
@@ -461,7 +461,8 @@
                 $(".hunt-success").css("display", "block").css("background","red");
                 $(".hunt-success").html('<p>' + response.message + '</p>');
               }
-              // $(window).scrollTop(position);
+              // make softer later
+              $(window).scrollTop("#contact-form");
             }
           });
 
