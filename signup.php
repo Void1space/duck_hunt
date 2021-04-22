@@ -20,7 +20,7 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['phoneNumber'
     $phoneNumber = $_POST['phone_number'];
     $payment = $_POST['payment'];
     // email message
-    $subject = "pwease work";
+    $subject = "Your Duck Hunt Info";
     $to = $email; 
     $msg = "Duck Hunter Info \n Your name: $name \n Email: $email \n Phone: $phoneNumber \n Cashapp / Venmo: $payment \n Contest Code: $contest_code";
     $headers = "From: duckhunt@eternallux.com" . "\r\n" .
@@ -28,9 +28,8 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['phoneNumber'
     "CC: voidspacelighting@gmail.com" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
     $send_email = mail($to,$subject,$msg,$headers);
-
-    echo ($send_email) ? 'success' : 'error';
-    mail($to,$name,$msg,$headers);
+    //echo ($send_email) ? 'success' : 'error';
+    // mail($to,$name,$msg,$headers);
     if(!empty($name) && !empty($email) && !empty($phoneNumber) && !empty($payment)){
 
         $response['message'] = "Success.";
@@ -41,6 +40,7 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['phoneNumber'
             if(mysqli_query($con,$query)){
                 $response['message'] = "You're in the hunt!";
                 $response['status'] = 1;
+                
                 
             }
             else{
