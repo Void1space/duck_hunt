@@ -8,10 +8,10 @@
 } */
 .hunt-success {
   text-align: center;
-  color: #162a83;
+  color: #4564ec;
   padding: 10px 0px;
-  background: rgba(231, 235, 249, 1);
-  font-size: 20px;
+  background: rgb(70, 235, 5);
+  font-size: 40px;
   display: none;
 }
 .hunt-success p {
