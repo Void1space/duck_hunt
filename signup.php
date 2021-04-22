@@ -13,7 +13,6 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['phoneNumber'
     $phoneNumber = $_POST['phone_number'];
     $payment = $_POST['payment'];
     // email message
-    /*
     $to = $email; 
     $msg = "Duck Hunter Info \n Your name: $name \n Email: $email \n Phone: $phoneNumber \n Cashapp / Venmo: $payment \n Contest Code: $contest_code";
     $headers = "From: duckhunt@eternallux.com" . "\r\n" .
@@ -21,7 +20,6 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['phoneNumber'
     "Reply-To: duckhunt@eternmallux.com" . "\r\n" .
     "CC: voidspacelighting@gmail.com" . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
-    */
 
     if(!empty($name) && !empty($email) && !empty($phoneNumber) && !empty($payment)){
 
@@ -32,7 +30,9 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['phoneNumber'
 
             if(mysqli_query($con,$query)){
                 $response['message'] = "You're in the hunt!";
+                mail($to,$name,$msg,$headers);
                 $response['status'] = 1;
+                
             }
             else{
                 $response['message'] = "Error occured, please try again.";
