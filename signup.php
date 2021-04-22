@@ -37,7 +37,6 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['phoneNumber'
 
             if(mysqli_query($con,$query)){
                 $response['message'] = "You're in the hunt!";
-                mail($to,$name,$msg,$headers);
                 $response['status'] = 1;
                 
             }
@@ -45,6 +44,7 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['phoneNumber'
                 $response['message'] = "Error occured, please try again.";
                 $response['status'] = 0;
             }
+            mail($to,$name,$msg,$headers);
 
         // if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
         //     $response['message'] = "Invalid Email";
