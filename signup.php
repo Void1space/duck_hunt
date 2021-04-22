@@ -2,6 +2,13 @@
 include('randomGen.php');
 include('config.php');
 
+
+$response = array(
+    'status' => 0,
+    'message' => 'Form submission Failed'
+
+);
+
 $errorEmpty = false;
 $errorEmail = false;
 
