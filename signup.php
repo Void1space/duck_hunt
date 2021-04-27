@@ -33,7 +33,7 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['phoneNumber'
     if(!empty($name) && !empty($email) && !empty($phoneNumber) && !empty($payment)){
 
         $response['message'] = "Success.";
-        $send_email = mail($to,$subject,$msg,$headers);
+        // $send_email = mail($to,$subject,$msg,$headers);
         $query = "INSERT INTO hunters(names,email,phone,payment_info,contest_code) ";
             $query .= "VALUES ('$name','$email','$phoneNumber','$payment','$contest_code')";
 

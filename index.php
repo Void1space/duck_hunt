@@ -76,31 +76,29 @@
 
     <!--====== NAVBAR PART ENDS ======-->
     <!--==== duck picture====-->
-    <section id="duck-image" class="duck-image">
-        
-        <img class="fadeIn duck-hunt-image" src="/wxyzr/assets/images/duck-hunt-prize.png">
-        <div class="duck-hunt-text">
-          <h2>DUCK HUNT CHALLENGE!</h2>
-        </div>
-            
+    <!-- <section class="duck-image"> 
+      <div class="container">
+          <div class="duck-text">
+            <h1>WXYZR DUCK HUNT</h1>
+            <h1> CHALLENGE!</h1>
+          </div> 
+    </div>
+    </section> -->
+    <section>
+      <div class="container duck-pad">
+    <div id="duck-image" class="duck-content">
+        <img class="mx-auto d-block"  src="/wxyzr/assets/images/duck-hunt-wxyzr.png">
+          <div class="duck-hunt-text">
+            <h1>WXYZR DUCK HUNT</h1>
+            <h1> CHALLENGE!</h1>
+          </div> 
+    </div>
+    </div>
     </section>
     <!--====== CONTACT TWO PART START ======-->
       
-    <section id="contact" class="contact-area">
+    <section id="contact" class="contact-area duck-green">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <!--    <div class="section-title text-center pb-20">
-              <h3 class="title">Get in touch</h3>
-              <p class="text">
-                Stop wasting time and money designing and managing a website
-                that doesn’t get results. Happiness guaranteed!
-              </p>
-            </div> -->
-            <!-- section title -->
-          </div>
-        </div>
-        <!-- row -->
         <div class="row">
           <div class="col-lg-6">
             <div
@@ -238,7 +236,7 @@
 
     <!--====== ABOUT PART START ======-->
 
-    <section id="about" class="about-area">
+    <section id="about" class="about-area  duck-white">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-6 col-lg-8">
@@ -247,7 +245,7 @@
               data-wow-duration="1.5s"
               data-wow-offset="100"
             >
-              <img src="/wxyzr/assets/images/duck-prize.png" alt="duck hunt prizes" />
+              <img src="/wxyzr/assets/images/duck-prize.png" alt="duck hunt prizes" width="70%" />
             </div>
             <div class="section-title text-center mt-30 pb-40">
               <h4
@@ -269,7 +267,7 @@
         </div>
         <!-- row -->
 
-        <div class="row">
+        <div class="row duck-pad">
           <div class="col-lg-6">
             <div
               class="single-about d-sm-flex mt-30 wow fadeInUp"
@@ -354,13 +352,13 @@
 
     <!--====== FOOTER FOUR PART START ======-->
 
-    <footer id="footer" class="footer-area">
+    <footer id="footer" class="footer-area duck-green">
       <div class="footer-widget">
-        <div class="container">
-          <div class="row">
+        <!-- <div class="container">
+          <div class="row"> -->
  
               <!-- footer link -->
-            </div>
+            <!-- </div>
             <div class="col-lg-3 col-sm-6">
               <div class="footer-link">
                 <h6 class="footer-title">Help & Suuport</h6>
@@ -369,14 +367,14 @@
                   <li><a href="#">FAQ</a></li>
                   <li><a href="#">Terms & Conditions</a></li>
                 </ul>
-              </div>
+              </div> -->
               <!-- footer link -->
-            </div>
-          </div>
+            <!-- </div>
+          </div> -->
           <!-- row -->
-        </div>
+        <!-- </div> -->
         <!-- container -->
-      </div>
+      <!-- </div> -->
       <!-- footer widget -->
 
       <div class="footer-copyright">
@@ -387,7 +385,7 @@
                 <p class="text">
                   Crafted by
                   <a
-                    style="color: #38f9d7"
+                    style="color: #000"
                     rel="nofollow"
                     href="https://voidspaceled.com"
                     >Void Space</a
@@ -395,16 +393,10 @@
                 </p>
               </div>
               <!--  copyright -->
-            </div>
-            <div class="col-lg-2">
-              <div class="footer-logo text-center mt-10">
-                <a href="index.html"
-                  ><img src="assets/images/logo-2.svg" alt="Logo"
-                /></a>
-              </div>
+        
               <!-- footer logo -->
             </div>
-            <div class="col-lg-5">
+            <!-- <div class="col-lg-5">
               <ul class="social text-center text-lg-right mt-10">
                 <li>
                   <a href="https://facebook.com/uideckHQ"
@@ -424,9 +416,9 @@
                 <li>
                   <a href="#"><i class="lni-linkedin-original"></i></a>
                 </li>
-              </ul>
+              </ul> -->
               <!-- social -->
-            </div>
+            <!-- </div> -->
           </div>
           <!-- row -->
         </div>
@@ -450,7 +442,7 @@
             processData:false,
             
             success:function(response){
-              $(".hunt-success").css("display", "block").css("background","rgb(70, 235, 5)");
+              $(".hunt-success").css("display", "block").css("background","rgb(240, 239, 96)");
               
               if(response.status == 1){
 
