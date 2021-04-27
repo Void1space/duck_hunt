@@ -27,13 +27,13 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['phoneNumber'
     "Reply-To: duckhunt@eternmallux.com" . "\r\n" .
     "CC: voidspacelighting@gmail.com" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
-    $send_email = mail($to,$subject,$msg,$headers);
-    //echo ($send_email) ? 'success' : 'error';
-    // mail($to,$name,$msg,$headers);
+ 
+        
+    
     if(!empty($name) && !empty($email) && !empty($phoneNumber) && !empty($payment)){
 
         $response['message'] = "Success.";
-
+        $send_email = mail($to,$subject,$msg,$headers);
         $query = "INSERT INTO hunters(names,email,phone,payment_info,contest_code) ";
             $query .= "VALUES ('$name','$email','$phoneNumber','$payment','$contest_code')";
 
